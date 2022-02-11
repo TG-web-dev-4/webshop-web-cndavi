@@ -1,5 +1,13 @@
+import Hero from '../components/Hero'
+import Gallery from '../components/Gallery'
+
 const Home = () => {
-  return <h1>Home</h1>
+  return (
+    <>
+      <Hero />
+      <Gallery />
+    </>
+  )
 }
 
 export default Home
