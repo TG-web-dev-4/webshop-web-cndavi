@@ -11,12 +11,57 @@
     @media (min-width: 75em) {
       @content;
     }
+  } @else if $breakpoint == xlg {
+    @media (min-width: 200em) {
+      @content;
+    }
   }
 }
 
-@mixin icons() {
-  font-size: 1.275rem;
+@mixin icon() {
+  font-size: 1.4rem;
+  a {
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease all;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.7rem;
+  }
+  @include breakpoint(lg) {
+    font-size: 1.675rem;
+  }
+  @include breakpoint(xlg) {
+    font-size: 1.9rem;
+  }
+}
+
+@mixin hover() {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin image() {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+@mixin productHeader() {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  img {
+    height: 400px;
+    align-self: center;
+    @include breakpoint(md) {
+      width: 100%;
+      height: auto;
+      align-self: center;
+    }
+  }
 }
