@@ -1,0 +1,15 @@
+@import './../../../styles//mixins.scss';
+@import './../../../styles//variables.scss';
+
+.cartEmpty {
+  width: 100%;
+
+  p {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 300;
+    @include breakpoint(md) {
+      font-size: 1.275rem;
+    }
+  }
+}
