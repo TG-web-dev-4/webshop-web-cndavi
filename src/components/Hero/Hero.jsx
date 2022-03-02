@@ -1,24 +1,64 @@
 import styles from './Hero.module.scss'
-import ScrollToButton from '../../elements/ScrollToButton/ScrollToButton'
+import Gallery from '../Gallery'
 
 const Hero = () => (
   <>
-    <header className={styles.hero}>
-      <div className={styles.hero__banner}>
-        <video autoPlay loop muted className={styles.hero__banner__video}>
-          <source src={require(`../../assets/videos/hero.mp4`)} />
-        </video>
-        <div className={styles.hero__banner__title}>
-          <h1 className={styles.hero__banner__title__main}>
-            welcome to <span>WEEKEND</span>
-          </h1>
+    <div className={styles.hero}>
+      <div className={styles.hero__container}>
+        <div className={styles.hero__container__grid}>
+          <div className={styles.hero__container__grid__item}>
+            <Gallery
+              title='Kurt Cobain'
+              category='Record Player'
+              imageUrl={require(`../../assets/images/hero/img1.jpg`)}
+            />
+          </div>
+
+          <div className={styles.hero__container__grid__item}>
+            <Gallery
+              title='Amy Winehouse'
+              category='Record Player'
+              imageUrl={require(`../../assets/images/hero/img2.jpg`)}
+            />
+          </div>
+
+          <div className={styles.hero__container__grid__item}>
+            <Gallery
+              title='Jim Morrison'
+              category='Record Player'
+              imageUrl={require(`../../assets/images/hero/img3.jpg`)}
+            />
+          </div>
+
+          <div
+            className={`${styles.hero__container__grid__item} ${styles.hero__container__grid__item__hide}`}
+          >
+            <Gallery
+              title='David Bowie'
+              category='Record Player'
+              imageUrl={require(`../../assets/images/hero/img6.jpg`)}
+            />
+          </div>
+
+          <div className={styles.hero__container__grid__item__small}>
+            <Gallery
+              title='Janis Joplin'
+              category='Record Player'
+              imageUrl={require(`../../assets/images/hero/img4.jpg`)}
+            />
+          </div>
+
+          <div className={styles.hero__container__grid__item__small}>
+            <Gallery
+              title='Jimi Hendrix'
+              category='Record Player'
+              imageUrl={require(`../../assets/images/hero/img5.jpg`)}
+            />
+          </div>
         </div>
-        <div className={styles.hero__banner__seperator}>
-          <ScrollToButton />
-        </div>
-        <div className={styles.hero__banner__breadcrumb}></div>
       </div>
-    </header>
+    </div>
+    <div className={styles.hero__breadcrumb}></div>
   </>
 )
 

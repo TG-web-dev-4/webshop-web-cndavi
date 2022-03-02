@@ -2,95 +2,58 @@
 @import './../../styles//variables.scss';
 
 .hero {
-  display: flex;
+  padding: 0 1.5rem;
+  @include breakpoint(sm) {
+    padding: 0 3rem;
+  }
+  @include breakpoint(md) {
+    padding: 0 5rem;
+  }
+  @include breakpoint(lg) {
+    padding: 0 12rem;
+  }
 
-  &__banner {
+  &__container {
+    margin: auto;
     width: 100%;
-    position: relative;
-
-    &__video {
-      width: 100%;
+    max-width: 71.25rem;
+    @include breakpoint(lg) {
+      max-width: 90rem;
+    }
+    @include breakpoint(xlg) {
+      max-width: 120rem;
     }
 
-    &__title {
-      background: rgba(17, 17, 17, 0.527);
-      position: absolute;
-      top: 35%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      z-index: 1;
-      width: 60%;
-      height: 20%;
-      color: var(--color-light);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadein 3s ease;
-      -webkit-animation: fadein 3s ease;
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 1rem;
 
-      &__main {
-        font-size: 1rem;
-        font-weight: 200;
+      &__item {
+        grid-column-start: span 6;
+        grid-column-end: span 12;
+
+        &__hide {
+          @include breakpoint(sm) {
+            display: none;
+          }
+        }
 
         @include breakpoint(sm) {
-          font-size: 1.3rem;
+          grid-column-start: span 4;
+          grid-column-end: span 4;
         }
 
-        @include breakpoint(md) {
-          font-size: 1.5rem;
-        }
-
-        @include breakpoint(lg) {
-          font-size: 1.8rem;
-        }
-
-        span {
-          font-size: 1.2rem;
-          font-weight: 500;
-
-          @include breakpoint(sm) {
-            font-size: 1.5rem;
-          }
-
-          @include breakpoint(md) {
-            font-size: 1.8rem;
-          }
-
-          @include breakpoint(lg) {
-            font-size: 2rem;
-          }
+        &__small {
+          grid-column-start: span 6;
+          grid-column-end: span 6;
         }
       }
     }
-
-    &__seperator {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      cursor: pointer;
-    }
-
-    &__breadcrumb {
-      padding: 3rem;
-    }
   }
-}
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  &__breadcrumb {
+    padding: 3rem;
   }
 }
