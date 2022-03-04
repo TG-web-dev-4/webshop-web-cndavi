@@ -2,8 +2,23 @@
 @import './../../styles//variables.scss';
 
 .header {
-  @include productHeader();
   position: relative;
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 5rem;
+  img {
+    height: 400px;
+    align-self: center;
+    @include breakpoint(sm) {
+      height: auto;
+      width: 100%;
+    }
+    @include breakpoint(md) {
+      height: 100vh;
+      align-self: center;
+    }
+  }
+
   &__text {
     position: absolute;
     top: 50%;
@@ -11,7 +26,7 @@
     overflow: hidden;
     color: var(--color-white);
     font-size: 1.257rem;
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     @include breakpoint(lg) {
       font-size: 2.157rem;
@@ -30,7 +45,7 @@
         font-size: 2.075rem;
       }
       @include breakpoint(xlg) {
-        font-size: 2.675rem;
+        font-size: 2.875rem;
       }
     }
 
@@ -52,34 +67,46 @@
 }
 
 .products {
-  padding: 0 1rem;
-  margin: 5rem 0;
+  margin: auto;
+  width: 100%;
+  max-width: 71.25rem;
+  padding: 2rem 1.5rem;
   @include breakpoint(sm) {
-    padding: 0 3rem;
+    padding: 2rem 3rem;
   }
   @include breakpoint(md) {
-    padding: 0 5rem;
+    padding: 2rem 5rem;
   }
   @include breakpoint(lg) {
-    padding: 0 12rem;
+    max-width: 90rem;
+    padding: 5rem 0 10rem 0;
+  }
+  @include breakpoint(xlg) {
+    max-width: 120rem;
+  }
+
+  &__title {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 3rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    border-bottom: 2px solid var(--color-medium-gray);
+    font-size: 1.275rem;
+    @include breakpoint(lg) {
+      font-size: 1.857rem;
+      font-weight: 600;
+    }
   }
 
   &__container {
-    margin: auto;
-    width: 100%;
-    max-width: 71.25rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    grid-gap: 1rem;
+    padding-top: 4rem;
     @include breakpoint(sm) {
       grid-gap: 2rem;
-    }
-    @include breakpoint(lg) {
-      max-width: 90rem;
-    }
-    @include breakpoint(xlg) {
-      max-width: 120rem;
     }
   }
 }
