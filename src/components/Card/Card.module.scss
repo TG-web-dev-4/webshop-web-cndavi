@@ -11,9 +11,6 @@
     justify-content: center;
     align-items: center;
     padding-top: 10rem;
-    @include breakpoint(md) {
-      padding-top: 20rem;
-    }
     @include breakpoint(lg) {
       max-width: 90rem;
       padding-top: 25rem;

@@ -78,11 +78,7 @@
     padding: 2rem 5rem;
   }
   @include breakpoint(lg) {
-    max-width: 90rem;
-    padding: 5rem 0 10rem 0;
-  }
-  @include breakpoint(xlg) {
-    max-width: 120rem;
+    padding: 5rem 0 10rem;
   }
 
   &__title {
@@ -107,6 +103,12 @@
     padding-top: 4rem;
     @include breakpoint(sm) {
       grid-gap: 2rem;
+    }
+    @include breakpoint(lg) {
+      max-width: 90rem;
+    }
+    @include breakpoint(xlg) {
+      max-width: 120rem;
     }
   }
 }
