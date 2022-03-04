@@ -6,11 +6,11 @@ import Account from './pages/Account'
 import Dashboard from './pages/Dashboard'
 import NotFoundPage from './components/NotFoundPage'
 import ScrollToTop from './utils/scrollToTop'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <Router basename='/webshop-web-cndavi'>
+    <Router>
       <ScrollToTop>
         <Navigation />
         <Routes>
