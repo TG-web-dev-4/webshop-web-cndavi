@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/webshop-web-cndavi/static/css/main.ab5e7f00.css",
+    "main.css": "/webshop-web-cndavi/static/css/main.e152ccf0.css",
     "main.js": "/webshop-web-cndavi/static/js/main.8bdcbd81.js",
     "static/media/hero.mp4": "/webshop-web-cndavi/static/media/hero.9c0e2b1aaaf4c1778b16.mp4",
     "static/media/img6.jpg": "/webshop-web-cndavi/static/media/img6.ff38c5aac74ddab11c54.jpg",
@@ -16,11 +16,11 @@
     "static/media/img12.jpg": "/webshop-web-cndavi/static/media/img12.3b34229d36fb4bacfdb3.jpg",
     "static/media/img7.jpg": "/webshop-web-cndavi/static/media/img7.e0fc035774f48ac86017.jpg",
     "index.html": "/webshop-web-cndavi/index.html",
-    "main.ab5e7f00.css.map": "/webshop-web-cndavi/static/css/main.ab5e7f00.css.map",
+    "main.e152ccf0.css.map": "/webshop-web-cndavi/static/css/main.e152ccf0.css.map",
     "main.8bdcbd81.js.map": "/webshop-web-cndavi/static/js/main.8bdcbd81.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab5e7f00.css",
+    "static/css/main.e152ccf0.css",
     "static/js/main.8bdcbd81.js"
   ]
 }
