@@ -1,0 +1,46 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: var(--color-dark);
+  color: var(--color-white);
+
+  &__heading {
+    line-height: 1.05;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    font-size: 1.775rem;
+    padding-bottom: 3rem;
+    @include breakpoint(md) {
+      font-size: 1.575rem;
+      margin-bottom: 1.5rem;
+    }
+    @include breakpoint(lg) {
+      font-size: 2.075rem;
+    }
+    @include breakpoint(xlg) {
+      font-size: 2.675rem;
+    }
+  }
+
+  &__btn {
+    padding: 1rem 2rem;
+    font-size: 1.275rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    background: var(--color-light);
+    @include breakpoint(lg) {
+      padding: 1.2rem 2.75rem;
+      font-size: 1.175rem;
+    }
+  }
+}

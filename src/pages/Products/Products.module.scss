@@ -1,0 +1,120 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.header {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 5rem;
+  img {
+    height: 400px;
+    align-self: center;
+    @include breakpoint(sm) {
+      height: auto;
+      width: 100%;
+    }
+    @include breakpoint(xlg) {
+      height: 100vh;
+      align-self: center;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    overflow: hidden;
+    color: var(--color-white);
+    font-size: 1.257rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+      font-size: 2.157rem;
+    }
+
+    h1 {
+      line-height: 1.05;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.275rem;
+      @include breakpoint(md) {
+        font-size: 1.575rem;
+        margin-bottom: 0.5rem;
+      }
+      @include breakpoint(lg) {
+        font-size: 2.075rem;
+      }
+      @include breakpoint(xlg) {
+        font-size: 2.875rem;
+      }
+    }
+
+    h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      @include breakpoint(md) {
+        font-size: 1.175rem;
+        margin-bottom: 1.5rem;
+      }
+      @include breakpoint(lg) {
+        font-size: 1.275rem;
+      }
+      @include breakpoint(xlg) {
+        font-size: 1.875rem;
+      }
+    }
+  }
+}
+
+.products {
+  padding: 0 1.5rem 5rem;
+  @include breakpoint(sm) {
+    padding: 0 3rem 10rem;
+  }
+  @include breakpoint(md) {
+    padding: 0 5rem 7rem;
+  }
+  @include breakpoint(lg) {
+    padding: 0 12rem 7rem;
+  }
+
+  &__title {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 3rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    border-bottom: 2px solid var(--color-medium-gray);
+    font-size: 1.275rem;
+    max-width: 71.25rem;
+    @include breakpoint(lg) {
+      font-size: 1.657rem;
+      font-weight: 600;
+      max-width: 90rem;
+    }
+    @include breakpoint(xlg) {
+      font-size: 1.857rem;
+      max-width: 120rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    margin: auto;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    padding-top: 4rem;
+    max-width: 71.25rem;
+    @include breakpoint(sm) {
+      grid-gap: 2rem;
+    }
+    @include breakpoint(lg) {
+      max-width: 90rem;
+    }
+    @include breakpoint(xlg) {
+      max-width: 120rem;
+    }
+  }
+}

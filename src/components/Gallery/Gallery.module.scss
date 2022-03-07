@@ -1,0 +1,26 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.gallery {
+  background: var(--color-light);
+
+  &__item {
+    position: relative;
+
+    &__description {
+      background: var(--color-light);
+      pointer-events: none;
+      position: absolute;
+      padding: 1.2rem;
+      @include breakpoint(sm) {
+        padding: 2rem;
+      }
+      @include breakpoint(lg) {
+        padding: 1.5rem 3.5rem;
+      }
+      @include breakpoint(xlg) {
+        padding: 2.5rem 4rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 48em) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 62em) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: 75em) {
+      @content;
+    }
+  } @else if $breakpoint == xlg {
+    @media (min-width: 200em) {
+      @content;
+    }
+  }
+}
+
+@mixin icon() {
+  font-size: 1.4rem;
+  a {
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease all;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.7rem;
+  }
+  @include breakpoint(lg) {
+    font-size: 1.675rem;
+  }
+  @include breakpoint(xlg) {
+    font-size: 1.9rem;
+  }
+}
+
+@mixin hover() {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin image() {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}

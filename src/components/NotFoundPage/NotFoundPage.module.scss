@@ -1,0 +1,20 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: var(--color-dark);
+  color: var(--color-white);
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+}

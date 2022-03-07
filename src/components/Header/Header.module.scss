@@ -1,0 +1,110 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.header {
+  min-width: 320px;
+  text-align: center;
+  line-height: 1;
+
+  &__banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__video {
+      height: 400px;
+      align-self: center;
+      @include breakpoint(md) {
+        width: 100%;
+        height: auto;
+        align-self: center;
+      }
+    }
+
+    &__title {
+      position: absolute;
+      top: 35%;
+      z-index: 1;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: block;
+      color: var(--color-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      @include breakpoint(sm) {
+        width: 45%;
+      }
+      @include breakpoint(lg) {
+        top: 40%;
+      }
+
+      h1 {
+        line-height: 1.05;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        font-size: 1.275rem;
+        @include breakpoint(md) {
+          font-size: 1.575rem;
+          margin-bottom: 1.5rem;
+        }
+        @include breakpoint(lg) {
+          font-size: 2.075rem;
+        }
+        @include breakpoint(xlg) {
+          font-size: 2.675rem;
+        }
+      }
+
+      h4 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        @include breakpoint(md) {
+          font-size: 1.175rem;
+          margin-bottom: 1.5rem;
+        }
+        @include breakpoint(lg) {
+          font-size: 1.275rem;
+        }
+        @include breakpoint(xlg) {
+          font-size: 1.875rem;
+        }
+      }
+
+      button {
+        padding: 1rem 1.75rem;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: inherit;
+        letter-spacing: 1.5px;
+        border: none;
+        background: var(--color-light);
+        @include breakpoint(md) {
+          padding: 1rem 2.35rem;
+          font-size: 1.175rem;
+        }
+        @include breakpoint(lg) {
+          padding: 1.2rem 2.75rem;
+          font-size: 1.175rem;
+        }
+      }
+    }
+
+    &__seperator {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__breadcrumb {
+      padding: 3rem;
+    }
+  }
+}
